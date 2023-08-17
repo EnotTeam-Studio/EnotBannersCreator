@@ -1,0 +1,170 @@
+# EnotBannersCreator (Java 11)
+
+# Create banners in-game, import and export it to mcgolem.com
+# Создавайте баннеры в игре, импортируйте и экспортируйте их на mcgolem.com
+
+# Configuring the database connection
+# Настройка подключения к базе данных
+database:
+
+  # The type of database. Supported: [sqlite, mysql, postgresql]
+  # Тип базы данных. Поддерживаемые: [sqlite, mysql, postgresql]
+  type: sqlite
+
+  # Configuring MySQL connection
+  # Настройка подключения к MySQL
+  mysql:
+    host: localhost
+    port: 3306
+    name: enotbannerscreator
+    user: admin
+    password: enotbannerscreator
+    params:
+      - 'autoReconnect=true'
+      - 'useSSL=DISABLED'
+
+  # Configuring PostgreSQL connection
+  # Настройка подключения к PostgreSQL
+  postgresql:
+    host: localhost
+    port: 5432
+    name: enotbannerscreator
+    user: admin
+    password: enotbannerscreator
+    params:
+      - 'autoReconnect=true'
+      - 'useSSL=DISABLED'
+
+  # Configuring SQLite connection
+  # Настройка подключения к SQLite
+  sqlite:
+    file: database.db
+
+# Configuring plugin localization (messages and gui):
+#  Enter the name of the file from the lang directory in this field,
+#  inbuilt localization files: ru_RU - Russian, en_GB - English
+# Настройка локализации плагина (сообщения и меню):
+#  Укажите в этом поле название файла из директории lang,
+#  встроенные файлы локализации: ru_RU - русский, en_GB - английский
+lang: en_GB
+
+# Basic GUI configuring
+# Основные настройки GUI
+gui:
+  filler-material: "STAINED_GLASS_PANE:15"
+
+# Configuring work with economy, supported plugins:
+#  Vault (1.7+), PlayerPoints (3.0.0+)
+# Настройка работы с экономикой, поддерживаемые плагины:
+#  Vault (1.7+), PlayerPoints (3.0.0+)
+economy:
+  enabled: true
+  type: Vault
+
+# Configuring banners settings
+# Настройка баннеров
+banners:
+
+  # The maximum length of the banner value used when creating,
+  # saving, importing and exporting banner
+  # Максимальная длина значения баннера, используется при создании,
+  # сохранении, импортировании и экспортировании баннера
+  max-value-length: 32
+
+  # Main plugin command
+  # Главная команда плагина
+  command:
+    label: "enotbannerscreator"
+    aliases: [ "bannerscraetor", "banners" ]
+    permission:
+      need: false
+      value: "enotbannerscreator.editor.use"
+
+  # Configuring rotating banners
+  # Настройка вращающихся баннеров
+  rotatable:
+
+    # Toggling rotating banners, if the feature is enabled, players will be able to create
+    # new banners, and already created ones will rotate
+    # Включение/выключение вращающихся баннеров, если функция включена - игроки смогут создавать
+    # новые баннеры, а уже созданные будут крутиться
+    enabled: true
+
+    command:
+      label: "bannersrotate"
+      aliases: [ "brotate" ]
+    permission:
+      use: "enotbanners.rotatable.use"
+      bypass-amount: "enotbanners.rotatable.bypass"
+      max-amount:
+        "enotbanners.rotatable.vip": 5
+        "enotbanners.rotatable.premium": 10
+
+  # Configuring crafting (creating) banners in GUI
+  # Настройка крафта (создания) баннеров в GUI
+  crafting:
+
+    # Banner creation mode:
+    #  FREE - When player click on the banner creation button, the player gets it for free
+    #  MONEY - When player click on the banner creation button, the player spends an equivalent amount of money
+    #  RESOURCES - When player click on the banner creation button, an equivalent amount of
+    #              resources will be taken from the player
+    # Режим работы создания баннеров:
+    #  FREE - При нажатии на кнопку создания баннера, игрок получает его бесплатно
+    #  MONEY - При нажатии на кнопку создания баннера, игрок тратит эквивалентное количество денег
+    #  RESOURCES - При нажатии на кнопку создания баннера, у игрока заберется эквивалентное количество ресурсов
+    mode: MONEY
+
+    permission:
+      need: false
+      value: "enotbanners.crafting"
+    materials-cost:
+      "STICK": 10
+      "WOOL:0": 15
+      "WOOL:1": 15
+      "WOOL:2": 15
+      "WOOL:3": 15
+      "WOOL:4": 15
+      "WOOL:5": 15
+      "WOOL:6": 15
+      "WOOL:7": 15
+      "WOOL:8": 15
+      "WOOL:9": 15
+      "WOOL:10": 15
+      "WOOL:11": 15
+      "WOOL:12": 15
+      "WOOL:13": 15
+      "WOOL:14": 15
+      "WOOL:15": 15
+      "INK_SACK:0": 20
+      "INK_SACK:1": 20
+      "INK_SACK:2": 20
+      "INK_SACK:3": 20
+      "INK_SACK:4": 20
+      "INK_SACK:5": 20
+      "INK_SACK:6": 20
+      "INK_SACK:7": 20
+      "INK_SACK:8": 20
+      "INK_SACK:9": 20
+      "INK_SACK:10": 20
+      "INK_SACK:11": 20
+      "INK_SACK:12": 20
+      "INK_SACK:13": 20
+      "INK_SACK:14": 20
+      "INK_SACK:15": 20
+      "BRICK": 25
+      "RED_ROSE:8": 25
+      "SKULL:1": 50
+      "SKULL:4": 50
+      "GOLDEN_APPLE:1": 50
+
+  # Configuring premade banners
+  #  You can get the values that are needed for premade banners on mcgolem:
+  #  https://mcgolem.com/services/banner/catalog?lang=en
+  # Настройка готовых баннеров
+  #  Получить значения, которые нужны для готовых баннеров можно на mcgolem:
+  #  https://mcgolem.com/services/banner/catalog?lang=ru
+  premade:
+    enabled: true
+    values:
+      - "paapppavcEclbLcwcf"

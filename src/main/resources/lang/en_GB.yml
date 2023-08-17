@@ -1,0 +1,455 @@
+# Localization of the plugin for the English-speaking server
+
+# Any ideas on how to improve the translation? Create an issue in the github repository:
+# https://github.com/EnotTeam-Studio/EnotBannersCreator
+
+messages:
+
+  on-console-command:
+    - "&cThis command cannot be used from the console! "
+
+  no-perm:
+    - " "
+    - " &cNot enough permissions "
+    - " &fYou don't have enough permissions "
+    - " &fto use this command "
+    - " "
+
+  rotate-block-is-not-banner:
+    - " "
+    - " &cRotatable banners "
+    - " &fThe block you are looking at "
+    - " &fis not a banner! "
+    - " "
+
+  rotate-max-amount:
+    - " "
+    - " &cRotatable banners "
+    - " &fYou have reached your limit on "
+    - " &frotating banners! "
+    - " "
+
+  rotate-added:
+    - " "
+    - " &eRotatable banners "
+    - " &fNow that banner will be spinning! "
+    - " "
+
+  export-banner:
+    - " "
+    - " &eBanner exporting "
+    - " &fYou can edit this banner in the browser,"
+    - " &fjust &eCLICK HERE"
+    - " "
+
+  import-banner:
+    - " "
+    - " &eBanner importing "
+    - " &fTo import banner, just send to chat"
+    - " &fvalue obtained from &emcgolem.com"
+    - " "
+
+  import-banner-max-length:
+    - " "
+    - " &eBanner importing "
+    - " &fUnfortunately, the banner you're trying "
+    - " &fto import is too large, try another one "
+    - " "
+
+  import-banner-not-found:
+    - " "
+    - " &eBanner importing"
+    - " &fBanner you are trying to import "
+    - " &fis not found, try another one "
+    - " "
+
+  banner-create-not-enough-money:
+    - " "
+    - " &eBanner creating"
+    - " &fNot enough money to purchase "
+    - " &fthis banner "
+    - " "
+
+  banner-create-successful:
+    - " "
+    - " &aBanner creating "
+    - " &fBanner has been successfully created! "
+    - " "
+
+  banner-create-not-enough-resources:
+    - " "
+    - " &eBanner creating"
+    - " &fNot enough resources to create "
+    - " &fthis banner! "
+    - " "
+
+gui:
+  main:
+    title: "&8Banner creating"
+    items:
+      mcgolem-import:
+        material: ITEM_FRAME
+        name: "&e➲ Import banner "
+        lore:
+          - " "
+          - " &fYou can create banner in handy "
+          - " &feditor on &emcgolem.com &fand "
+          - " &fimport it into server "
+          - " "
+          - " &e» &fClick, to import banner "
+          - " "
+      create-banner:
+        material: "CONCRETE_POWDER:5"
+        name: "&a+ Create banner"
+        lore:
+          - " "
+          - " &fCreate your own unique banner "
+          - " &fusing handy editor "
+          - " "
+          - " &a» &fClick, to create new "
+          - " &fbanner "
+          - " "
+      premade-banners:
+        material: BANNER
+        name: "&d✦ Prepared banners"
+        lore:
+          - " "
+          - " &d» &fClick, to open menu "
+          - " &fof prepared banners "
+          - " "
+      previous-page:
+        material: ARROW
+        name: "&e← &fPrevious page "
+        lore:
+          - " "
+          - " &e← &fClick, to open "
+          - " &fprevious page "
+          - " "
+      next-page:
+        material: ARROW
+        name: "&e→ &fNext page "
+        lore:
+          - " "
+          - " &e→ &fClick, to open "
+          - " &fnext page "
+          - " "
+  premade:
+    title: "&8Prepared banners"
+    items:
+      back:
+        material: IRON_DOOR
+        name: "&c← &fGo back"
+        lore:
+          - " "
+          - " &c← &fClick, to return "
+          - " &fto main menu "
+          - " "
+      previous-page:
+        material: ARROW
+        name: "&e← &fPrevious page "
+        lore:
+          - " "
+          - " &e← &fClick, to open "
+          - " &fprevious page "
+          - " "
+      next-page:
+        material: ARROW
+        name: "&e→ &fNext page "
+        lore:
+          - " "
+          - " &e→ &fClick, to open "
+          - " &fnext page "
+          - " "
+  base-color:
+    title: "&8Редактор флага"
+    items:
+      back:
+        material: IRON_DOOR
+        name: "&c← &fGo back"
+        lore:
+          - " "
+          - " &c← &fClick, to return "
+          - " &fto main menu "
+          - " "
+  patterns:
+    title: "&8Banner editor"
+    items:
+      back:
+        material: IRON_DOOR
+        name: "&c← &fGo back"
+        lore:
+          - " "
+          - " &c&l! &fChanges will not be saved"
+          - " "
+          - " &c← &fClick, to return "
+          - " &fto main menu "
+          - " "
+      delete:
+        material: BARRIER
+        name: "&c✖ Delete banner "
+        lore:
+          - " "
+          - " &c✖ &fClick to delete this "
+          - " &fbanner from your list "
+          - " "
+      remove-last-pattern:
+        material: ARROW
+        name: "&c← Delete last pattern "
+        lore:
+          - " "
+          - " &c← &fClick, to delete "
+          - " &flast pattern "
+          - " "
+      more-patterns:
+        material: SPECTRAL_ARROW
+        name: "&e↕ More patterns"
+        lore:
+          - " "
+          - " &e» &fClick, to view more "
+          - " &fpatterns "
+          - " "
+      save-banner:
+        material: "CONCRETE_POWDER:5"
+        name: "&aSave banner"
+        lore:
+          - " "
+          - " &a» &fClick, to save "
+          - " &fthis banner "
+          - " "
+      color-black:
+        material: "INK_SACK:0"
+        name: "&fSelect color: &7Black"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-red:
+        material: "INK_SACK:1"
+        name: "&fSelect color: &cRed"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-green:
+        material: "INK_SACK:2"
+        name: "&fSelect color: &2Green"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-brown:
+        material: "INK_SACK:3"
+        name: "&fSelect color: &6Brown"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-blue:
+        material: "INK_SACK:4"
+        name: "&fSelect color: &9Blue"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-purple:
+        material: "INK_SACK:5"
+        name: "&fSelect color: &5Purple"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-cyan:
+        material: "INK_SACK:6"
+        name: "&fSelect color: &3Cyan"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-light-gray:
+        material: "INK_SACK:7"
+        name: "&fSelect color: &7Light gray"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-gray:
+        material: "INK_SACK:8"
+        name: "&fSelect color: &8Gray"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-pink:
+        material: "INK_SACK:9"
+        name: "&fSelect color: &dPink"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-lime:
+        material: "INK_SACK:10"
+        name: "&fSelect color: &aLime"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-yellow:
+        material: "INK_SACK:11"
+        name: "&fSelect color: &eYellow"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-light-blue:
+        material: "INK_SACK:12"
+        name: "&fSelect color: &bLight blue"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-magenta:
+        material: "INK_SACK:13"
+        name: "&fSelect color: &dMagenta"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-orange:
+        material: "INK_SACK:14"
+        name: "&fSelect color: &6Orange"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+      color-white:
+        material: "INK_SACK:15"
+        name: "&fSelect color: White"
+        lore:
+          - " "
+          - " &e» &fClick, to select"
+          - " &fthis color"
+          - " "
+  info:
+    title: "&8Banner information"
+    items:
+
+      back:
+        material: IRON_DOOR
+        name: "&c← &fGo back"
+        lore:
+          - " "
+          - " &c&l! &fChanges will not be saved"
+          - " "
+          - " &c← &fClick, to return "
+          - " &fto main menu "
+          - " "
+
+      delete:
+        material: BARRIER
+        name: "&c✖ Delete banner "
+        lore:
+          - " "
+          - " &c✖ &fClick to delete this "
+          - " &fbanner from your list "
+          - " "
+
+      export-to-mcgolem:
+        material: ITEM_FRAME
+        name: "&eExport banner "
+        lore:
+          - " "
+          - " &e» &fClick, to export this "
+          - " &fbanner to &emcgolem.com &feditor "
+          - " "
+
+      crafting-free:
+        material: GOLD_NUGGET
+        name: "&aGet this banner "
+        lore:
+          - " "
+          - " &a» &fClick, to get "
+          - " &fthis banner "
+          - " "
+
+      crafting-buy:
+        material: GOLD_NUGGET
+        name: "&eBuy this banner"
+        lore:
+          - " "
+          - " &e» &fClick to buy this "
+          - " &fbanner for &e{cost}$ "
+          - " "
+
+      crafting-resources:
+        material: GOLD_NUGGET
+        name: "&eCraft this banner "
+        lore:
+          - " "
+          - " &e» &fClick to create this banner "
+          - " &ffrom resources in your inventory "
+          - " "
+
+      crafting-no-perm:
+        material: GOLD_NUGGET
+        name: "&eCreate this banner "
+        lore:
+          - " "
+          - " &cNot enough permissions "
+          - " "
+
+      copy-and-edit:
+        material: BOOK_AND_QUILL
+        name: "&eCopy and edit"
+        lore:
+          - " "
+          - " &e» &fClick to copy this banner and "
+          - " &fopen it in the editor "
+          - " "
+
+      patterns:
+        material: SIGN
+        name: "&ePatterns amount "
+        lore:
+          - " "
+          - " &fOn this banner "
+          - " &e{amount} patterns "
+          - " "
+      current-page:
+        material: WORKBENCH
+        name: "&eBanner recipe "
+        lore:
+          - " "
+          - " &fPage: "
+          - " &e{current}&7/{max} "
+          - " "
+      previous-page:
+        material: ARROW
+        name: "&e← &fPrevious page "
+        lore:
+          - " "
+          - " &e← &fClick, to open "
+          - " &fprevious page "
+          - " "
+      next-page:
+        material: ARROW
+        name: "&e→ &fNext page "
+        lore:
+          - " "
+          - " &e← &fClick, to open "
+          - " &fnext page "
+          - " "

@@ -1,0 +1,5 @@
+name: EnotBannersCreator
+version: '${project.version}'
+main: com.enotteam.enotbannerscreator.EnotBannersCreatorPlugin
+api-version: 1.13
+softdepend: [ Vault, PlayerPoints ]
